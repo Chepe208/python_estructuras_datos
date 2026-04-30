@@ -97,3 +97,27 @@ Ejecución completa. Se observa el catálogo total obtenido con `union()`, los p
 
 ### Reflexión personal
 Aprendí que los conjuntos son ideales para eliminar duplicados automáticamente y para operaciones de comparación eficientes (O(1) en `in`). Incluir `add()`, `update()` y `discard()` me permitió comprender la mutabilidad de los sets. Los métodos `union()`, `intersection()` y `difference()` son muy legibles, mientras que los operadores (`&`, `|`, `-`, `^`) tienen una sintaxis más compacta. También entendí de como usar `set()` para conjunto vacío y no `{}`.
+
+## Reto Módulo 5: Comprehensions – Analizador de ventas
+
+### Descripción
+Se aplican list, dict y set comprehensions sobre un dataset de 6 productos para:
+- Calcular valor total por producto (list comp).
+- Filtrar productos destacados (valor > 1000) con list comp.
+- Generar un diccionario con información de cada producto (dict comp).
+- Crear un ranking de productos premium (precio > 50) ordenado por valor (dict comp + sorted).
+- Obtener categorías únicas y productos baratos (set comp con filtro).
+- Mostrar resumen formateado y gran total usando `sum()`.
+
+### Solucion implementada
+- **List comprehension**: transformación (`[expr for x in it]`) y filtro (`if cond`).
+- **Dict comprehension**: creación a partir de lista de dicts, con filtro y transformación de valores.
+- **Set comprehension**: eliminación de duplicados y filtrado para obtener elementos únicos.
+- **Funciones integradas**: `sorted()` para ordenar (necesario por el reto) y `sum()` para total.
+
+### Evidencia de ejecución
+![Reporte de comprehensions](images/analizador_ejecucion.png)  
+Salida completa del programa. Se observan las cuatro listas resultantes, los diccionarios generados, los conjuntos únicos y el gran total. Cada resultado corresponde a una comprensión diferente, demostrando su uso práctico.
+
+### Reflexión personal
+Las comprehensions permiten escribir código muy conciso y legible para transformar y filtrar datos. Aprendí que una list comprehension con filtro reemplaza varias líneas de un bucle `for` con `append()`. Las dict comprehensions sirven para crear mapeos rapidos, y las set comprehensions eliminan duplicados automáticamente. También pude entender que para ordenar resultados es necesario combinar `sorted()` con una dict comprehension. Este reto me ayudó a integrar las tres formas de comprehensions en un caso real de análisis de ventas.
