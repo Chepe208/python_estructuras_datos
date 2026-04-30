@@ -79,3 +79,21 @@ Demostración de `in` para verificar existencia de una clave y `get()` para acce
 
 ### Reflexión personal
 Al modificar el código para incluir `update()`, `pop()` y `setdefault()`, comprendí cómo las operaciones CRUD en diccionarios permiten gestionar datos dinámicamente. El uso de `items()` en bucles anidados. Aprendí que `sum(values())` simplifica el cálculo de totales y que la dict comprehension es buena para transformar datos.
+
+## Reto Módulo 4: Conjuntos – Tiendas y recomendaciones de películas
+
+### Descripción
+Se definen tres conjuntos de productos para tiendas (Centro, Norte, Sur) y tres conjuntos de géneros cinematográficos para usuarios. Se aplican operaciones de teoría de conjuntos para hallar catálogo completo, productos comunes, exclusivos y solapamientos. Además, se usan operadores matemáticos para combinar géneros y verificar subconjuntos.
+
+### Solucion implementada
+- **Elementos únicos y creación**: literales `{}`, conjunto vacío `set()`.
+- **Operaciones básicas**: `add()`, `update()`, `discard()`.
+- **Métodos de teoría de conjuntos**: `union()`, `intersection()`, `difference()`, `isdisjoint()`.
+- **Operadores matemáticos**: `&` (intersección), `|` (unión), `-` (diferencia), `^` (diferencia simétrica), `<=` (subconjunto).
+
+### Evidencia de ejecución
+![Reporte de conjuntos](images/tienda_peliculas_ejecucion.png)  
+Ejecución completa. Se observa el catálogo total obtenido con `union()`, los productos comunes, los exclusivos de cada tienda con `difference()`, y la verificación de solapamiento con `isdisjoint()`. En la parte de películas se usan operadores matemáticos que son `&`, `|`, `-`, `^`, `<=` para calcular universo, comunes, diferencia simétrica y subconjunto.
+
+### Reflexión personal
+Aprendí que los conjuntos son ideales para eliminar duplicados automáticamente y para operaciones de comparación eficientes (O(1) en `in`). Incluir `add()`, `update()` y `discard()` me permitió comprender la mutabilidad de los sets. Los métodos `union()`, `intersection()` y `difference()` son muy legibles, mientras que los operadores (`&`, `|`, `-`, `^`) tienen una sintaxis más compacta. También entendí de como usar `set()` para conjunto vacío y no `{}`.
