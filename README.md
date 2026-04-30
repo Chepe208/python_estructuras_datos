@@ -57,3 +57,25 @@ Se cambia el director buscado a "Quentin Tarantin". La función `buscar_por_dire
 ### Reflexión personal
 
 Las tuplas entendí lo de la inmutabilidad que cuando se crea el catálogo, no se puede modificar por accidente. Aprendí a desempaquetar tuplas en bucles y con el operador `*`, y a retornar varios valores desde una función. También practiqué la acumulación de resultados en una nueva tupla.
+
+## Reto Módulo 3: Diccionarios – Análisis de ventas por región
+
+### Descripción
+Se define un diccionario anidado con ventas trimestrales de cuatro regiones. Se aplican operaciones CRUD (`update`, `pop`, `setdefault`), se calculan totales anuales, región con mayores ventas, acumulados por trimestre, porcentajes de participación y se genera un reporte ordenado.
+
+### Solucion iplementada
+- **Estructura Clave-Valor**: `in`, `get()`.
+- **Creación de diccionarios**: literal con llaves y anidados.
+- **Operaciones CRUD**: `update()` (añadir región Centro), `pop()` (eliminar región Oeste), `setdefault()` (inicializar acumuladores de trimestre), asignación directa `d[clave] = valor`.
+- **Iteración**: `items()`, `values()`, bucles anidados, `sorted()` con `key=lambda`.
+- **Comprensiones de diccionario**: para calcular porcentajes.
+
+
+![Reporte de ventas con CRUD](images/analisis_ventas_ejecucion.png)  
+Ejecución principal. Se observa el uso de `update()` para incorporar la región "Centro", `pop()` para eliminar "Oeste" (el mensaje de eliminación se muestra). Luego, mediante `items()` y `sum(values())` se calculan los totales anuales. Se usa `max` con `lambda` para la región líder. Los acumuladores por trimestre emplean `setdefault()` para inicializar cada clave de forma segura. Finalmente, una dict comprehension genera los porcentajes y `sorted()` imprime el reporte ordenado de mayor a menor.
+
+![Acceso seguro con in y get](images/analisis_ventas_ejecucion2.png)   
+Demostración de `in` para verificar existencia de una clave y `get()` para acceder sin riesgo de `KeyError`, cubriendo el subtema "Estructura Clave-Valor".
+
+### Reflexión personal
+Al modificar el código para incluir `update()`, `pop()` y `setdefault()`, comprendí cómo las operaciones CRUD en diccionarios permiten gestionar datos dinámicamente. El uso de `items()` en bucles anidados. Aprendí que `sum(values())` simplifica el cálculo de totales y que la dict comprehension es buena para transformar datos.
